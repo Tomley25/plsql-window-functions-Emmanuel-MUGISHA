@@ -42,9 +42,33 @@ CREATE TABLE customers (
     region VARCHAR2(50)
 );
 ```
-![Customers]()
+![Customers](https://github.com/Tomley25/plsql-window-functions-Emmanuel-MUGISHA/blob/main/Screenshot/Customers.png)
+
+✔️ **Products**
+``` sql
+ CREATE TABLE products (
+    product_id INT PRIMARY KEY,
+    name VARCHAR2(100),
+    category VARCHAR2(50)
+);
+```
+![Products](https://github.com/Tomley25/plsql-window-functions-Emmanuel-MUGISHA/blob/main/Screenshot/Products.png)
+
+✔️ **Transactions**
+```sql
+CREATE TABLE transactions (
+    transaction_id INT PRIMARY KEY,
+    customers_id INT REFERENCES customers(customer_id),
+    products_id INT REFERENCES products(product_id),
+    sale_date DATE,
+    amount NUMBER(10,2)
+);
+```
+![Transactions](https://github.com/Tomley25/plsql-window-functions-Emmanuel-MUGISHA/blob/main/Screenshot/Transactions.png)
 
 **ER Diagram:** 
+
+An Entity-Relationship (ER) diagram is a visual representation of how entities (things, concepts, or objects) relate to one another within a system. It is a high-level data model that acts as a blueprint for designing or analyzing relational databases, outlining the logical structure before development begins. 
 ![ER Diagram](https://github.com/Tomley25/plsql-window-functions-Emmanuel-MUGISHA/blob/main/Screenshot/ER%20Diagram.jpg) 
 
 ---
@@ -76,7 +100,7 @@ ORDER BY month;
 **Aggregate data**
 ![Aggregate](https://github.com/Tomley25/plsql-window-functions-Emmanuel-MUGISHA/blob/main/Screenshot/Moving%20avg%20data.png)
 
-3️⃣ Navigation – Month-over-Month Growth
+### 3️⃣ Navigation – Month-over-Month Growth
 ``` sql
 SELECT TO_CHAR(sale_date, 'YYYY-MM') AS month,
        SUM(amount) AS monthly_sales,
@@ -88,3 +112,13 @@ ORDER BY month;
 ```
 ![Month-over-Month Growth](https://github.com/Tomley25/plsql-window-functions-Emmanuel-MUGISHA/blob/main/Screenshot/Growth%20Data.png)
 
+### 4️⃣ Distribution – Customer Quartiles
+``` sql
+SELECT customer_id, SUM(amount) AS total_spent,
+       NTILE(4) OVER(ORDER BY SUM(amount) DESC) AS quartile
+FROM transactions
+GROUP BY customer_id;
+```
+![Quartile](https://github.com/Tomley25/plsql-window-functions-Emmanuel-MUGISHA/blob/main/Screenshot/Quartile%20sql.png)
+**Quartile data**
+![Quartile](https://github.com/Tomley25/plsql-window-functions-Emmanuel-MUGISHA/blob/main/Screenshot/Quartile%20data.png)
