@@ -51,4 +51,18 @@ FROM transactions t
 JOIN customers c ON t.customer_id = c.customer_id
 JOIN products p ON t.product_id = p.product_id
 GROUP BY c.region, p.name;
-![Top Products oer Region]()
+```
+![Top Products oer Region](https://github.com/Tomley25/plsql-window-functions-Emmanuel-MUGISHA/blob/main/Screenshot/Rank%20In%20Region%20data.png)
+
+### 2️⃣ Aggregate – Running Totals
+``` sql
+SELECT TO_CHAR(sale_date, 'YYYY-MM') AS month,
+       SUM(amount) AS monthly_sales,
+       SUM(SUM(amount)) OVER(ORDER BY TO_CHAR(sale_date, 'YYYY-MM')) AS running_total
+FROM transactions
+GROUP BY TO_CHAR(sale_date, 'YYYY-MM')
+ORDER BY month;
+```
+![Aggregate]()
+
+
