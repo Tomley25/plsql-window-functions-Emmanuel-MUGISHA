@@ -36,7 +36,7 @@ Provide insights into best-selling products, monthly growth patterns, and custom
 - `transactions` → Sales records  
 
 **ER Diagram:** 
-! [ER Diagram](https://github.com/Tomley25/plsql-window-functions-Emmanuel-MUGISHA/blob/87a91fb9273ec1eead9cab1e9a46ea5cfe1251dc/Screenshot/ER%20Diagram.jpg) 
+! [ER Diagram](github.com/Tomley25/plsql-window-functions-Emmanuel-MUGISHA/blob/main/Screenshot/ER%20Diagram.jpg) 
 
 ---
 
