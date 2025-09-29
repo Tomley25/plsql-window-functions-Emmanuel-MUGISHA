@@ -19,16 +19,47 @@ Provide insights into best-selling products, monthly growth patterns, and custom
 
 ---
 
-##  Success Criteria
-1. Identify **Top 5 products per region/quarter** → `RANK()`  
-2. Calculate **Running monthly sales totals** → `SUM() OVER()`  
-3. Analyze **Month-over-month growth** → `LAG()` / `LEAD()`  
-4. Segment customers into **Quartiles** → `NTILE(4)`  
-5. Compute **3-month moving averages** → `AVG() OVER()`  
+## Step 2: Success Criteria
+
+To measure the success of this analysis, I defined five clear, testable goals using PL/SQL window functions:
+
+1. **Top 5 Products per Region / Quarter → RANK()**
+
+Goal: Identify the highest-selling products in each region.
+
+How we met it: Coffee Beans consistently ranked #1 in Kigali and Huye (see Ranking query + screenshot).
+
+
+2. **Running Monthly Sales Totals → SUM() OVER()**
+
+Goal: Track cumulative sales growth over time.
+
+How we met it: Sales climbed steadily from Jan → Apr, reaching 92,000 cumulative by April.
+
+
+3. **Month-over-Month Growth → LAG() / LEAD()**
+
+Goal: Measure growth or decline in sales compared to the previous month.
+
+How we met it: Feb (+5k), Mar (+7k), Apr (+10k) all showed growth, while May (-22k) showed decline.
+
+
+4. **Customer Quartiles → NTILE(4)**
+
+Goal: Segment customers into 4 categories based on spending power.
+
+How we met it: Alice (1002) and Grace (1004) landed in Quartile 1 (high spenders), while Peter (1003) landed in Quartile 3.
+
+
+5. **3-Month Moving Averages → AVG() OVER()**
+
+Goal: Smooth out sales fluctuations to reveal trends.
+
+How we met it: The rolling average showed strong momentum until April, then signaled a slowdown in May.
 
 ---
 
-##  Database Schema
+## Step 3: Database Schema
 
 **Tables:**  
 - `customers` → Customer info  
@@ -73,7 +104,7 @@ An Entity-Relationship (ER) diagram is a visual representation of how entities (
 
 ---
 
-##  Window Functions Implementation  
+## Step 4:  Window Functions Implementation  
 
 ### 1️⃣ Ranking – Top Products per Region
 ```sql
@@ -86,6 +117,16 @@ JOIN products p ON t.product_id = p.product_id
 GROUP BY c.region, p.name;
 ```
 <img src="https://github.com/Tomley25/plsql-window-functions-Emmanuel-MUGISHA/blob/main/Screenshot/Rank%20In%20Region%20data.png" width= 650>
+
+### Percentage Rank
+```sql
+SELECT customer_id, SUM(amount) AS total_spent,
+       PERCENT_RANK() OVER(ORDER BY SUM(amount) DESC) AS percent_rank
+FROM transactions
+GROUP BY customer_id;
+```
+<img src =
+
 
 ### 2️⃣ Aggregate – Running Totals
 ``` sql
