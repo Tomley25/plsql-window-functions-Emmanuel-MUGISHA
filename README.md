@@ -36,7 +36,7 @@ Provide insights into best-selling products, monthly growth patterns, and custom
 - `transactions` → Sales records  
 
 **ER Diagram:** 
-! [ER Diagram](screenshots/ER Diagram.png)  
+! [ER Diagram](screenshots/ER_Diagram.png)  
 
 ---
 
