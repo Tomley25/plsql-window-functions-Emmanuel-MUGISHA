@@ -63,6 +63,19 @@ FROM transactions
 GROUP BY TO_CHAR(sale_date, 'YYYY-MM')
 ORDER BY month;
 ```
-![Aggregate]()
+![Aggregate](https://github.com/Tomley25/plsql-window-functions-Emmanuel-MUGISHA/blob/main/Screenshot/Moving%20avg%20sql.png)
+**Aggregate data**
+![Aggregate](https://github.com/Tomley25/plsql-window-functions-Emmanuel-MUGISHA/blob/main/Screenshot/Moving%20avg%20data.png)
 
+3️⃣ Navigation – Month-over-Month Growth
+``` sql
+SELECT TO_CHAR(sale_date, 'YYYY-MM') AS month,
+       SUM(amount) AS monthly_sales,
+       LAG(SUM(amount)) OVER(ORDER BY TO_CHAR(sale_date, 'YYYY-MM')) AS prev_month,
+       (SUM(amount) - LAG(SUM(amount)) OVER(ORDER BY TO_CHAR(sale_date, 'YYYY-MM'))) AS growth
+FROM transactions
+GROUP BY TO_CHAR(sale_date, 'YYYY-MM')
+ORDER BY month;
+```
+![Month-over-Month Growth]()
 
