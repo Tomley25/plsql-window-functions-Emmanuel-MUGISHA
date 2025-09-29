@@ -273,12 +273,14 @@ The moving average confirmed that sales were gaining momentum from May to Decemb
 
 **3. Prescriptive** – What next?
 
-The company should increase stock of Coffee Beans and Maize Flour in Kigali and Huye to match demand.
+>**Inventory focus:** Keep larger stocks of Umukamira Milk and Inyange Juice to sustain demand in Kigali, while improving marketing for weaker products like Fruits and Rice.
 
-Retain top customers like Alice and Grace by introducing loyalty benefits or personalized discounts.
+>**Growth stabilization:** Investigate the causes of sales drops in February, August, and December, and plan targeted promotions or stock adjustments during those months to avoid sharp declines.
 
-Encourage growth from lower quartile customers through bundle deals or promotions that push them to spend more.
+>**Customer engagement:** Retain top spenders (Shyaka and Mugisha) through loyalty rewards, discounts, or exclusive offers, while encouraging low spenders (Mucyo and Nshuti) to purchase more often with bundles or price incentives.
 
-Since Musanze had weaker sales, the company should expand successful Kigali promotions into that region.
+>**Seasonal planning:** Use the sales boost patterns from March, May, and December as indicators for seasonal campaigns, aligning stock levels and promotions to maximize returns.
 
-Finally, management should plan ahead for dips like the one in May by improving stock planning and strengthening marketing campaigns.
+>**Balanced product strategy:** While milk and juice dominate, invest in awareness and offers for staple foods like maize flour and cassava flour to diversify revenue and reduce dependence on beverages.
+
+### Step 7:
