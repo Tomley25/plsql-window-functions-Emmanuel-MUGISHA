@@ -36,7 +36,7 @@ Provide insights into best-selling products, monthly growth patterns, and custom
 - `transactions` → Sales records  
 
 **ER Diagram:** 
-! [ER Diagram](github.com/Tomley25/plsql-window-functions-Emmanuel-MUGISHA/blob/main/Screenshot/ER%20Diagram.jpg) 
+![ER Diagram](https://github.com/Tomley25/plsql-window-functions-Emmanuel-MUGISHA/blob/main/Screenshot/ER%20Diagram.jpg) 
 
 ---
 
@@ -51,3 +51,4 @@ FROM transactions t
 JOIN customers c ON t.customer_id = c.customer_id
 JOIN products p ON t.product_id = p.product_id
 GROUP BY c.region, p.name;
+![Top Products oer Region]()
