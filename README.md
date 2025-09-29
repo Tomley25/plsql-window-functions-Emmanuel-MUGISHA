@@ -118,17 +118,17 @@ GROUP BY c.region, p.name;
 ```
 <img src="https://github.com/Tomley25/plsql-window-functions-Emmanuel-MUGISHA/blob/main/Screenshot/Rank%20In%20Region%20data.png" width= 650>
 
-### Percentage Rank
+### 2️⃣ Percentage Rank
 ```sql
 SELECT customer_id, SUM(amount) AS total_spent,
        PERCENT_RANK() OVER(ORDER BY SUM(amount) DESC) AS percent_rank
 FROM transactions
 GROUP BY customer_id;
 ```
-<img src =
+<img src ="https://github.com/Tomley25/plsql-window-functions-Emmanuel-MUGISHA/blob/main/Screenshot/percentage%20rank.jpg" width= 650>
 
 
-### 2️⃣ Aggregate – Running Totals
+### 3️⃣ Aggregate – Running Totals
 ``` sql
 SELECT TO_CHAR(sale_date, 'YYYY-MM') AS month,
        SUM(amount) AS monthly_sales,
@@ -142,7 +142,7 @@ ORDER BY month;
 **Aggregate data**
 <img src="https://github.com/Tomley25/plsql-window-functions-Emmanuel-MUGISHA/blob/main/Screenshot/Moving%20avg%20data.png" width= 650>
 
-### 3️⃣ Navigation – Month-over-Month Growth
+### 4️⃣ Navigation – Month-over-Month Growth
 ``` sql
 SELECT TO_CHAR(sale_date, 'YYYY-MM') AS month,
        SUM(amount) AS monthly_sales,
@@ -154,7 +154,7 @@ ORDER BY month;
 ```
 <img src="https://github.com/Tomley25/plsql-window-functions-Emmanuel-MUGISHA/blob/main/Screenshot/Growth%20Data.png" width= 650>
 
-### 4️⃣ Distribution – Customer Quartiles
+### 6️⃣ Distribution – Customer Quartiles
 ``` sql
 SELECT customer_id, SUM(amount) AS total_spent,
        NTILE(4) OVER(ORDER BY SUM(amount) DESC) AS quartile
