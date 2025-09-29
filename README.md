@@ -33,7 +33,16 @@ Provide insights into best-selling products, monthly growth patterns, and custom
 **Tables:**  
 - `customers` → Customer info  
 - `products` → Product catalog  
-- `transactions` → Sales records  
+- `transactions` → Sales records
+✔️ **Customers**
+``` sql
+CREATE TABLE customers (
+    customer_id INT PRIMARY KEY,
+    name VARCHAR2(100),
+    region VARCHAR2(50)
+);
+```
+![Customers]()
 
 **ER Diagram:** 
 ![ER Diagram](https://github.com/Tomley25/plsql-window-functions-Emmanuel-MUGISHA/blob/main/Screenshot/ER%20Diagram.jpg) 
@@ -77,5 +86,5 @@ FROM transactions
 GROUP BY TO_CHAR(sale_date, 'YYYY-MM')
 ORDER BY month;
 ```
-![Month-over-Month Growth]()
+![Month-over-Month Growth](https://github.com/Tomley25/plsql-window-functions-Emmanuel-MUGISHA/blob/main/Screenshot/Growth%20Data.png)
 
