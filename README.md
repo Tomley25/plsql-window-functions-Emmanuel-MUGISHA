@@ -35,8 +35,8 @@ Provide insights into best-selling products, monthly growth patterns, and custom
 - `products` → Product catalog  
 - `transactions` → Sales records  
 
-**ER Diagram:**  
-![ER Diagram](screenshots/ERD_window_functions.png)  
+**ER Diagram:** 
+! [ER Diagram](screenshots/ER Diagram.png)  
 
 ---
 
