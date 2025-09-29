@@ -261,13 +261,15 @@ The moving average confirmed that sales were gaining momentum from May to Decemb
 
 **2. Diagnostic** – Why did it happen?
 
-The higher Coffee Beans sales in Kigali and Huye can be linked to promotional campaigns that boosted demand in the first two quarters.
+> **Top products:** Umukamira Milk and Inyange Juice led sales in Kigali because of their popularity and likely higher demand compared to products like Fruits, Coffee Beans, Maize Flour, Rice, and Cassava Flour.
 
-The decline in May most likely came from stock shortages of Coffee Beans and uneven supply for other products.
+> **Stable running totals:** The steady rise in totals through the year suggests consistent customer purchasing behavior, with no major sales gaps month to month.
 
-When looking at customer segments, the top quartile customers were repeat buyers, while the bottom quartiles only purchased occasionally and in smaller amounts.
+>**Growth fluctuations:** The growth increases in March, May, and December show promotional or seasonal demand spikes, while the drops in February, August, and December could point to stock shortages or reduced customer activity.
 
-Seasonal demand also played a role, as March and April are months when demand for staple foods and beverages usually rises.
+>**Customer spending patterns:** High spenders like Christian Shyaka and Tomley Mugisha are repeat buyers who drive much of the revenue, while Fabrice Mucyo and Christian Nshuti contribute less, showing a gap between top and low quartile customers.
+
+>**Moving average trend:** The stronger averages from May to December indicate improved sales consistency, while earlier months (Jan–Mar) show weak performance likely tied to low customer activity or limited stock availability.
 
 **3. Prescriptive** – What next?
 
