@@ -283,4 +283,14 @@ The moving average confirmed that sales were gaining momentum from May to Decemb
 
 >**Balanced product strategy:** While milk and juice dominate, invest in awareness and offers for staple foods like maize flour and cassava flour to diversify revenue and reduce dependence on beverages.
 
-### Step 7:
+### Step 7: References
+1. Feuerstein, S., & Pribyl, B. (2014). Oracle PL/SQL Programming, Sixth Edition. O’Reilly Media.
+2. Groff, J. R., & Weinberg, P. N. (2013). SQL: The Complete Reference, Third Edition. McGraw-Hill Education.
+3. Date, C. J. (2004). An Introduction to Database Systems, Eighth Edition. Pearson Addison-Wesley.
+4. Coronel, C., & Morris, S. (2019). Database Systems: Design, Implementation, & Management, 13th Edition. Cengage Learning.
+5. Ramakrishnan, R., & Gehrke, J. (2003). Database Management Systems, Third Edition. McGraw-Hill.
+6. Oracle Academy. (2025). Database Programming with SQL – Teaching and Learning Resources.
+7. Connolly, T., & Begg, C. (2015). Database Systems: A Practical Approach to Design, Implementation, and Management, Sixth Edition. Pearson.
+8. Maniraguha, E. (2025). Database Development with PL/SQL (INSY 8311) – Lecture notes and class materials, Auca.
+9. Oracle Corporation. (2025). Oracle® Database SQL Language Reference 19c. Retrieved from **https://docs.oracle.com/en/database/oracle/oracle-database/19/sqlrf**
+10. Oracle Corporation. (2025). Analytic Functions. Retrieved from **https://docs.oracle.com/en/database/oracle/oracle-database/19/sqlrf/Analytic-Functions.html**
