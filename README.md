@@ -77,7 +77,7 @@ CREATE TABLE customers (
 <img src="https://github.com/Tomley25/plsql-window-functions-Emmanuel-MUGISHA/blob/main/Screenshot/Customers.png" width= 600>
 
 ### Data Insertion
-- **Records inserted into Customers** 
+-- **Records inserted into Customers** 
 **Query:**
 ```sql
 INSERT INTO customers (customer_id, name, region) VALUES (1001, 'Tonny Claire', 'Kigali');
@@ -85,17 +85,11 @@ INSERT INTO customers (customer_id, name, region) VALUES (1002, 'Mbabazi Sandra'
 INSERT INTO customers (customer_id, name, region) VALUES (1003, 'Uwera Ange', 'Musanze');
 INSERT INTO customers (customer_id, name, region) VALUES (1004, 'Uwase Ritha', 'Kigali');
 INSERT INTO customers (customer_id, name, region) VALUES (1005, 'Manzi Chris', 'Huye');
-
-
--- Insert sample products
-INSERT INTO products (product_id, name, category) VALUES (2001, 'Coffee Beans', 'Beverages');
-INSERT INTO products (product_id, name, category) VALUES (2002, 'Tea Pack', 'Beverages');
-INSERT INTO products (product_id, name, category) VALUES (2003, 'Bread', 'Bakery');
-INSERT INTO products (product_id, name, category) VALUES (2004, 'Sugar', 'Grocery');
-INSERT INTO products (product_id, name, category) VALUES (2005, 'Cooking Oil', 'Grocery');
 ```
-
-
+<p float='left'>
+  <img src="https://github.com/Tomley25/plsql-window-functions-Emmanuel-MUGISHA/blob/main/Screenshot/Sample%20customer.png" width=400>
+  <img src="https://github.com/Tomley25/plsql-window-functions-Emmanuel-MUGISHA/blob/main/Screenshot/Customers.png" width=400>
+</p>
 
 ✔️ **Products**
 ``` sql
@@ -106,6 +100,19 @@ INSERT INTO products (product_id, name, category) VALUES (2005, 'Cooking Oil', '
 );
 ```
 <img src="https://github.com/Tomley25/plsql-window-functions-Emmanuel-MUGISHA/blob/main/Screenshot/Products.png" width= 650>
+
+-- **Records Inserted into products**
+``` sql
+INSERT INTO products (product_id, name, category) VALUES (2001, 'Coffee Beans', 'Beverages');
+INSERT INTO products (product_id, name, category) VALUES (2002, 'Tea Pack', 'Beverages');
+INSERT INTO products (product_id, name, category) VALUES (2003, 'Bread', 'Bakery');
+INSERT INTO products (product_id, name, category) VALUES (2004, 'Sugar', 'Grocery');
+INSERT INTO products (product_id, name, category) VALUES (2005, 'Cooking Oil', 'Grocery');
+```
+<p float='left'>
+  <img src="https://github.com/Tomley25/plsql-window-functions-Emmanuel-MUGISHA/blob/main/Screenshot/Sample%20product.png" width=350>
+  <img src='https://github.com/Tomley25/plsql-window-functions-Emmanuel-MUGISHA/blob/main/Screenshot/Products.png' width=350>
+</p>
 
 ✔️ **Transactions**
 ```sql
@@ -118,6 +125,45 @@ CREATE TABLE transactions (
 );
 ```
 <img src="https://github.com/Tomley25/plsql-window-functions-Emmanuel-MUGISHA/blob/main/Screenshot/Transactions.png" width= 650>
+
+-- **Records inserted into Transactions**
+```sql
+-- Insert sample transactions
+INSERT INTO transactions (transaction_id, customer_id, product_id, sale_date, amount) 
+VALUES (3001, 1001, 2001, DATE '2025-01-15', 25000);
+
+INSERT INTO transactions (transaction_id, customer_id, product_id, sale_date, amount) 
+VALUES (3002, 1002, 2003, DATE '2025-01-20', 15000);
+
+INSERT INTO transactions (transaction_id, customer_id, product_id, sale_date, amount) 
+VALUES (3003, 1003, 2002, DATE '2025-02-05', 18000);
+
+INSERT INTO transactions (transaction_id, customer_id, product_id, sale_date, amount) 
+VALUES (3004, 1004, 2004, DATE '2025-02-15', 22000);
+
+INSERT INTO transactions (transaction_id, customer_id, product_id, sale_date, amount) 
+VALUES (3005, 1005, 2005, DATE '2025-03-01', 30000);
+
+INSERT INTO transactions (transaction_id, customer_id, product_id, sale_date, amount) 
+VALUES (3006, 1001, 2003, DATE '2025-03-10', 12000);
+
+INSERT INTO transactions (transaction_id, customer_id, product_id, sale_date, amount) 
+VALUES (3007, 1002, 2005, DATE '2025-04-05', 28000);
+
+INSERT INTO transactions (transaction_id, customer_id, product_id, sale_date, amount) 
+VALUES (3008, 1003, 2001, DATE '2025-04-20', 26000);
+
+INSERT INTO transactions (transaction_id, customer_id, product_id, sale_date, amount) 
+VALUES (3009, 1004, 2002, DATE '2025-05-02', 14000);
+
+INSERT INTO transactions (transaction_id, customer_id, product_id, sale_date, amount) 
+VALUES (3010, 1005, 2004, DATE '2025-05-15', 19000);
+```
+<p float='left'>
+  <img src="https://github.com/Tomley25/plsql-window-functions-Emmanuel-MUGISHA/blob/main/Screenshot/Sample%20transactions.png" width=350>
+  <img src="https://github.com/Tomley25/plsql-window-functions-Emmanuel-MUGISHA/blob/main/Screenshot/Transactions.png" width=350>
+</p>
+
 
 **ER Diagram:** 
 
@@ -187,3 +233,38 @@ GROUP BY customer_id;
 
 **Quartile data**
 <img src="https://github.com/Tomley25/plsql-window-functions-Emmanuel-MUGISHA/blob/main/Screenshot/Quartile%20data.png" width= 650>
+
+### Step 6: Results Analysis
+ **1. Descriptive** – What happened?
+
+In the ranking, Umukamira Milk and Inyange Juice came out on top in both Kigali. Other products like Fruits, coffee beans, maize flour, Rice and Cassava Flour but didn’t perform as strongly.
+
+Looking at the running totals, sales went up steadily from January until December, where they never fell.
+
+The month-over-month growth shows increases of +3k in March, +10k in May, and +10k in Dec, followed by a sharp drop of -5k in Feb, -15k in Aug and -5k in Dec.
+
+From the quartile analysis, Christian SHYAKA (1002) and Grace (1004) were the highest spenders, John (1001) was just below them, and Peter (1003) spent the least.
+
+The moving average confirmed that sales were gaining momentum until April, but May’s figures weakened the trend.
+
+**2. Diagnostic** – Why did it happen?
+
+The higher Coffee Beans sales in Kigali and Huye can be linked to promotional campaigns that boosted demand in the first two quarters.
+
+The decline in May most likely came from stock shortages of Coffee Beans and uneven supply for other products.
+
+When looking at customer segments, the top quartile customers were repeat buyers, while the bottom quartiles only purchased occasionally and in smaller amounts.
+
+Seasonal demand also played a role, as March and April are months when demand for staple foods and beverages usually rises.
+
+**3. Prescriptive** – What next?
+
+The company should increase stock of Coffee Beans and Maize Flour in Kigali and Huye to match demand.
+
+Retain top customers like Alice and Grace by introducing loyalty benefits or personalized discounts.
+
+Encourage growth from lower quartile customers through bundle deals or promotions that push them to spend more.
+
+Since Musanze had weaker sales, the company should expand successful Kigali promotions into that region.
+
+Finally, management should plan ahead for dips like the one in May by improving stock planning and strengthening marketing campaigns.
