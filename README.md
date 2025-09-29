@@ -69,7 +69,7 @@ CREATE TABLE transactions (
 **ER Diagram:** 
 
 An Entity-Relationship (ER) diagram is a visual representation of how entities (things, concepts, or objects) relate to one another within a system. It is a high-level data model that acts as a blueprint for designing or analyzing relational databases, outlining the logical structure before development begins. 
-<img src="https://github.com/Tomley25/plsql-window-functions-Emmanuel-MUGISHA/blob/main/Screenshot/ER%20Diagram.jpg" width= 650> 
+<img src="https://github.com/Tomley25/plsql-window-functions-Emmanuel-MUGISHA/blob/main/Screenshot/ER%20Diagram.png" width= 650> 
 
 ---
 
