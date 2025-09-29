@@ -1,4 +1,11 @@
-# 📊 PL/SQL Window Functions – Emmanuel MUGISHA
+# 📊 PL/SQL Window Functions 
+
+### Student: Emmanuel MUGISHA  
+### Course: Database Development with PL/SQL (INSY 8311)  
+### Instructor: Eric Maniraguha  
+### Submission Date: 29 September 2025 
+
+---
 
 ## 📌 Problem Definition
 **Business Context:**  
