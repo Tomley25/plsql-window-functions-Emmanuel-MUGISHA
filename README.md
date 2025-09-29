@@ -255,9 +255,9 @@ Looking at the running totals, sales went up steadily from January until Decembe
 
 The month-over-month growth shows increases of +3k in March, +10k in May, and +10k in Dec, followed by a sharp drop of -5k in Feb, -15k in Aug and -5k in Dec.
 
-From the quartile analysis, Christian SHYAKA (1002) and Grace (1004) were the highest spenders, John (1001) was just below them, and Peter (1003) spent the least.
+From the quartile analysis, Christian SHYAKA (90) and Tomley MUGISHA (100) were the highest spenders, Fabrice MUCYO (10) was just below them, and Christian NSHUTI (70) spent the least.
 
-The moving average confirmed that sales were gaining momentum until April, but May’s figures weakened the trend.
+The moving average confirmed that sales were gaining momentum from May to December, but March to January figures weakened the trend.
 
 **2. Diagnostic** – Why did it happen?
 
