@@ -65,6 +65,7 @@ How we met it: The rolling average showed strong momentum until April, then sign
 - `customers` → Customer info  
 - `products` → Product catalog  
 - `transactions` → Sales records
+  
 ✔️ **Customers**
 ``` sql
 CREATE TABLE customers (
@@ -74,6 +75,27 @@ CREATE TABLE customers (
 );
 ```
 <img src="https://github.com/Tomley25/plsql-window-functions-Emmanuel-MUGISHA/blob/main/Screenshot/Customers.png" width= 600>
+
+### Data Insertion
+- **Records inserted into Customers** 
+**Query:**
+```sql
+INSERT INTO customers (customer_id, name, region) VALUES (1001, 'Tonny Claire', 'Kigali');
+INSERT INTO customers (customer_id, name, region) VALUES (1002, 'Mbabazi Sandra', 'Huye');
+INSERT INTO customers (customer_id, name, region) VALUES (1003, 'Uwera Ange', 'Musanze');
+INSERT INTO customers (customer_id, name, region) VALUES (1004, 'Uwase Ritha', 'Kigali');
+INSERT INTO customers (customer_id, name, region) VALUES (1005, 'Manzi Chris', 'Huye');
+
+
+-- Insert sample products
+INSERT INTO products (product_id, name, category) VALUES (2001, 'Coffee Beans', 'Beverages');
+INSERT INTO products (product_id, name, category) VALUES (2002, 'Tea Pack', 'Beverages');
+INSERT INTO products (product_id, name, category) VALUES (2003, 'Bread', 'Bakery');
+INSERT INTO products (product_id, name, category) VALUES (2004, 'Sugar', 'Grocery');
+INSERT INTO products (product_id, name, category) VALUES (2005, 'Cooking Oil', 'Grocery');
+```
+
+
 
 ✔️ **Products**
 ``` sql
