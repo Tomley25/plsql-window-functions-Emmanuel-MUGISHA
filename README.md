@@ -1,4 +1,4 @@
-# 📊 PL/SQL Window Functions 
+#  PL/SQL Window Functions 
 
 ### Student: Emmanuel MUGISHA  
 ### Course: Database Development with PL/SQL (INSY 8311)  
@@ -7,7 +7,7 @@
 
 ---
 
-## 📌 Problem Definition
+##  Problem Definition
 **Business Context:**  
 A retail company in Rwanda that sells food and beverages wants to track its customers and product performance.  
 
@@ -19,7 +19,7 @@ Provide insights into best-selling products, monthly growth patterns, and custom
 
 ---
 
-## 🎯 Success Criteria
+##  Success Criteria
 1. Identify **Top 5 products per region/quarter** → `RANK()`  
 2. Calculate **Running monthly sales totals** → `SUM() OVER()`  
 3. Analyze **Month-over-month growth** → `LAG()` / `LEAD()`  
@@ -28,7 +28,7 @@ Provide insights into best-selling products, monthly growth patterns, and custom
 
 ---
 
-## 🗄️ Database Schema
+##  Database Schema
 
 **Tables:**  
 - `customers` → Customer info  
@@ -42,7 +42,7 @@ CREATE TABLE customers (
     region VARCHAR2(50)
 );
 ```
-![Customers](https://github.com/Tomley25/plsql-window-functions-Emmanuel-MUGISHA/blob/main/Screenshot/Customers.png)
+<img src="https://github.com/Tomley25/plsql-window-functions-Emmanuel-MUGISHA/blob/main/Screenshot/Customers.png" width= 600>
 
 ✔️ **Products**
 ``` sql
@@ -52,7 +52,7 @@ CREATE TABLE customers (
     category VARCHAR2(50)
 );
 ```
-![Products](https://github.com/Tomley25/plsql-window-functions-Emmanuel-MUGISHA/blob/main/Screenshot/Products.png)
+<img src="https://github.com/Tomley25/plsql-window-functions-Emmanuel-MUGISHA/blob/main/Screenshot/Products.png" width= 650>
 
 ✔️ **Transactions**
 ```sql
@@ -64,16 +64,16 @@ CREATE TABLE transactions (
     amount NUMBER(10,2)
 );
 ```
-![Transactions](https://github.com/Tomley25/plsql-window-functions-Emmanuel-MUGISHA/blob/main/Screenshot/Transactions.png)
+<img src="https://github.com/Tomley25/plsql-window-functions-Emmanuel-MUGISHA/blob/main/Screenshot/Transactions.png" width= 650>
 
 **ER Diagram:** 
 
 An Entity-Relationship (ER) diagram is a visual representation of how entities (things, concepts, or objects) relate to one another within a system. It is a high-level data model that acts as a blueprint for designing or analyzing relational databases, outlining the logical structure before development begins. 
-![ER Diagram](https://github.com/Tomley25/plsql-window-functions-Emmanuel-MUGISHA/blob/main/Screenshot/ER%20Diagram.jpg) 
+<img src="https://github.com/Tomley25/plsql-window-functions-Emmanuel-MUGISHA/blob/main/Screenshot/ER%20Diagram.jpg" width= 650> 
 
 ---
 
-## 🧑‍💻 Window Functions Implementation  
+##  Window Functions Implementation  
 
 ### 1️⃣ Ranking – Top Products per Region
 ```sql
@@ -85,7 +85,7 @@ JOIN customers c ON t.customer_id = c.customer_id
 JOIN products p ON t.product_id = p.product_id
 GROUP BY c.region, p.name;
 ```
-![Top Products oer Region](https://github.com/Tomley25/plsql-window-functions-Emmanuel-MUGISHA/blob/main/Screenshot/Rank%20In%20Region%20data.png)
+<img src="https://github.com/Tomley25/plsql-window-functions-Emmanuel-MUGISHA/blob/main/Screenshot/Rank%20In%20Region%20data.png" width= 650>
 
 ### 2️⃣ Aggregate – Running Totals
 ``` sql
@@ -96,9 +96,10 @@ FROM transactions
 GROUP BY TO_CHAR(sale_date, 'YYYY-MM')
 ORDER BY month;
 ```
-![Aggregate](https://github.com/Tomley25/plsql-window-functions-Emmanuel-MUGISHA/blob/main/Screenshot/Moving%20avg%20sql.png)
+<img src="https://github.com/Tomley25/plsql-window-functions-Emmanuel-MUGISHA/blob/main/Screenshot/Moving%20avg%20sql.png" width=650>
+
 **Aggregate data**
-![Aggregate](https://github.com/Tomley25/plsql-window-functions-Emmanuel-MUGISHA/blob/main/Screenshot/Moving%20avg%20data.png)
+<img src="https://github.com/Tomley25/plsql-window-functions-Emmanuel-MUGISHA/blob/main/Screenshot/Moving%20avg%20data.png" width= 650>
 
 ### 3️⃣ Navigation – Month-over-Month Growth
 ``` sql
@@ -110,7 +111,7 @@ FROM transactions
 GROUP BY TO_CHAR(sale_date, 'YYYY-MM')
 ORDER BY month;
 ```
-![Month-over-Month Growth](https://github.com/Tomley25/plsql-window-functions-Emmanuel-MUGISHA/blob/main/Screenshot/Growth%20Data.png)
+<img src="https://github.com/Tomley25/plsql-window-functions-Emmanuel-MUGISHA/blob/main/Screenshot/Growth%20Data.png" width= 650>
 
 ### 4️⃣ Distribution – Customer Quartiles
 ``` sql
@@ -119,6 +120,7 @@ SELECT customer_id, SUM(amount) AS total_spent,
 FROM transactions
 GROUP BY customer_id;
 ```
-![Quartile](https://github.com/Tomley25/plsql-window-functions-Emmanuel-MUGISHA/blob/main/Screenshot/Quartile%20sql.png)
+<img src="https://github.com/Tomley25/plsql-window-functions-Emmanuel-MUGISHA/blob/main/Screenshot/Quartile%20sql.png" width= 650>
+
 **Quartile data**
-![Quartile](https://github.com/Tomley25/plsql-window-functions-Emmanuel-MUGISHA/blob/main/Screenshot/Quartile%20data.png)
+<img src="https://github.com/Tomley25/plsql-window-functions-Emmanuel-MUGISHA/blob/main/Screenshot/Quartile%20data.png" width= 650>
